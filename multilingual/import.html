@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Translation Import — Multilingual Prototype</title>
+  <link rel="stylesheet" type="text/css" href="CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/form-items.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/buttons.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  <script src="../javascript/jquery-ui.min.js"></script>
+  <script src="javascript/multilingual.js"></script>
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+	<div id="container">
+         <div id="branding">
+                 <h1 class="page-title">Region & language</h1>
+        	<nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Configuration</a></li><li><a href="/admin/config/regional" title="Regional settings, localization and translation.">Region & language</a></li></ol></nav>              
+<p></p>
+    </div>
+    
+<div id="contentarea">
+<div id="language-settings">
+		<h3>Language settings for Asturian</h3>
+            <div>
+                <div id="edit-langcode-view"><label class="inline" for="edit-langcode-view">Language code</label> en</div>
+                <div>
+                    <label for="edit-name">Language name*</label> 
+                    <input type="text" id="edit-name" name="name" value="English" size="60" maxlength="64" class="input-text required" style="width:500px; margin-bottom: 20px;" required aria-required="true" />
+                </div>
+                <div class="form-item form-type-radios form-item-direction">
+                    <label for="edit-direction">Direction*
+                    </label> 
+                        <div class="description" id="edit-direction--description">Direction that text in this language is presented.
+                        </div>
+                        <div id="edit-direction" class="form-radios inline">
+                            <div class="form-item form-type-radio form-item-direction">
+							<input type="radio" id="edit-direction-0" name="update_interval_days" value="0" checked="checked" class="form-radio inline" />
+                            <label class="label--inline" for="edit-direction-0">Left to right</label>
+                            </div>
+                            <div class="form-item form-type-radio form-item-direction">
+                            <input type="radio" id="edit-direction-1" name="update_interval_days" value="0" checked="checked" class="form-radio inline" />
+                            <label class="label--inline" for="edit-direction-1">Right to left</label>
+                            </div>
+                        </div>
+            	</div>
+          </div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

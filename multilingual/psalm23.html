@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Node edit — Multilingual Prototype</title>
+  <link rel="stylesheet" type="text/css" href="CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/form-items.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/buttons.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  <script src="../javascript/jquery-ui.min.js"></script>
+  <script src="javascript/multilingual.js"></script>
+  
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+<div id="container">
+	<div id="branding">           
+        <h1 class="page-title">An article written in English</h1>
+        <nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Content</a></li></ol></nav>   
+        <ul class="tabs__group">
+            <li class="tabs__tab">
+              <a class="tabs__tab__link" href="#">View</a>
+            </li>
+            <li class="tabs__tab is-active">
+              <a class="tabs__tab__link" href="index.html">Edit</a>
+            </li>
+        </ul>
+	</div>
+<div id="contentarea">
+
+<form accept-charset="UTF-8">
+<div>
+<p><a href="#" id="trans-toggle-on">Hide source text</a></p>
+<p><a href="#" id="trans-toggle-off">Show source text</a></p>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    	<label class="label">Title</label><span class="language-info">Language: EN (source)</span><a href="#" class="copy" id="copy-title">Copy &#8594;</a>
+    	<div id="title-sourcetext"><p>An article written in English</p></div>
+    </div>
+    <div class="field-translation">
+        <div class="form-item" id="title-field">
+        <label class="label"  for="edit-title">Title*</label> 
+        <input type="text" class="input-text" name="title" id="title-textfield" value="" size="60" 
+        maxlength="255" class="form-text required" required aria-required="true" />
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    <label class="label">Body</label><span class="language-info">Language: EN (source)</span><a href="#" class="copy" id="copy-body">Copy &#8594;</a>
+		<div id="bodysource">
+        <p>You, Lord, are my shepherd. I will never be in need.</br>
+		You let me rest in fields of green grass.</br>
+        You lead me to streams of peaceful water, and you refresh my life. </br>
+        You are true to your name, and you lead me along the right paths. </br>
+        I may walk through valleys as dark as death, but I won’t be afraid. </br>
+        You are with me, and your shepherd’s rod makes me feel safe. You treat me to a feast, while my enemies watch. </br>
+        You honor me as your guest, and you fill my cup until it overflows. </br>
+        Your kindness and love will always be with me each day of my life, and I will live forever in your house</p></div>
+    </div>
+    <div class="field-translation">
+        <div class="form-item form-type-textarea" id="body">
+         <label class="label"  for="edit-body-und-0-value">Body</label> 
+         <div id="mock-wysiwyg"></div>
+         <textarea class="textarea" id="edit-body" rows="9" cols="60" placeholder=""></textarea>
+            <div id="text-help">
+             <p><a href="/filter/tips" target="_blank" style="float: right">More information about text formats</a></p>
+            <label for="edit-body-und-0-format--2">Text format</label> 
+            <select class="filter-list form-select" style="display:inline" id="edit-body-und-0-format--2" name="body[und][0][format]">
+            <option value="filtered_html" selected="selected">Filtered HTML</option>
+            <option value="full_html">Full HTML</option>
+            <option value="plain_text">Plain text</option></select>
+            </div>
+         </div>
+	</div>
+</div>
+    
+<hr>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    	<label class="label">Tags</label><span class="language-info">Language: EN (source)</span><a href="#" class="copy">Copy &#8594;</a>
+        <p>flexitarian, seitan, keffiyeh</p>
+    </div>
+    	<div class="field-translation">
+			<div class="field-type-taxonomy-term-reference field-name-field-tags field-widget-taxonomy-autocomplete form-wrapper" id="edit-field-tags">
+                <div class="form-item form-type-textfield" id="tags-field">
+                    <label class="label"  for="edit-field-tags-und">Tags</label> 
+                    <input aria-describedby="edit-field-tags-und--description" class="input-text" type="text" id="edit-field-tags-und" name="field_tags[und]" value="" size="60" maxlength="1024" placeholder="" /><input class="autocomplete" id="edit-field-tags-und-autocomplete" type="hidden" value="http://sa807776c2cd5579.s3.simplytest.me/taxonomy/autocomplete/field_tags" />
+                    <div class="description" id="edit-field-tags-und--description">Enter a comma-separated list of words to describe your content.</div>
+                </div>
+        	</div>
+       </div>
+</div>
+
+<hr>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    	<label class="label">Image</label><span class="language-info">Language: EN (source)</span><a href="#" class="copy">Copy &#8594;</a>
+        <p>This field is not translatable</p>
+    </div>
+    	<div class="field-translation">
+            <div class="field-type-image field-name-field-image field-widget-image-image form-wrapper" id="edit-field-image">
+            <div id="edit-field-image-und-0-upload-ajax-wrapper"><div class="form-item form-type-managed-file form-item-field-image-und-0">
+         <label class="label"  for="edit-field-image-und-0-upload">Image</label> 
+         <div class="image-widget form-managed-file clearfix">
+         <div class="image-widget-data">
+         <input type="file" id="browse" class="input-text"  />
+         <input formnovalidate type="submit" id="upload-button" name="upload_button" value="Upload" class="button form-submit" /></div>
+         </div>
+        <div class="description" id="edit-field-image-und-0-upload--description">Upload an image to go with this article. Files must be less than <strong>2 MB</strong>. Allowed file types: <strong>png gif jpg jpeg</strong>.</div>
+        </div>
+	</div>
+</div>
+<hr>
+
+</div></div><input type="hidden" name="changed" value="1367007552" /><input type="hidden" name="form_build_id" value="form-XpDW9sDT_sZr-ijxhDsEFVQszbeIgm5ERCBn3mjI6_0" /><input type="hidden" name="form_token" value="hHCg1tk0tW4fj9e19Df5X14O7llaHc8MlhT2HRitLKY" /><input type="hidden" name="form_id" value="article_node_form" /><div class="entity-meta form-wrapper" id="edit-advanced"><div class="entity-meta-header form-wrapper" id="edit-meta"><div class="published form-item form-type-item form-item-published" id="edit-published">
+ Published
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zz">
+<head>
+  <title notranslate>Interface translation — Multilingual Prototype: </title>
+  <link rel="stylesheet" type="text/css" href="../CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/form-items.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/buttons.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  <script src="../javascript/jquery-ui.min.js"></script>
+  <script src="../javascript/multilingual.js"></script>
+  
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+	<div id="container">
+         <div id="branding">
+                 <h1 class="page-title">Region & language</h1>
+        	<nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Configuration</a></li><li><a href="/admin/config/regional" title="Regional settings, localization and translation.">Region & language</a></li></ol></nav> 
+            <ul class="tabs__group">
+            <li class="tabs__tab">
+              <a class="tabs__tab__link" href="region_&_language.html">Region</a>
+            </li>
+            <li class="tabs__tab">
+              <a class="tabs__tab__link is-active" href="languages.html">Language</a>
+            </li>
+         </ul>
+	</div>
+    <div id="secondary-tabs-wrapper">
+    <ul class="secondary-tabs clearfix">
+      <li class="secondary-tabs__tab"><a class="secondary-tabs__tab__link" href="languages.html">Languages</a></li>
+      <li class="secondary-tabs__tab is-active"><a class="secondary-tabs__tab__link" href="detection_&_selection.html">Detection & selection</a></li>
+      <li class="secondary-tabs__tab"><a class="secondary-tabs__tab__link" href="interface_translation.html">Interface translation</a></li>
+    </ul> 
+            <p></p>            
+	</div>  
+<div id="contentarea">
+<div id="help">
+<h3>Content translation help</h3><div id="showhelp">Show</div><div id="hidehelp">Hide</div>
+<p>If you want to translate a node by hand simply type your translation of the source to the corresponding field. If the language is similar ie. Fernch to canadian French, you can first copy the the source to the field then edit.</p>
+<p>If you want to use a machine translation browser plugin simply install the plugin (available from <a>chrome web store</a>, <a>mozilla.com</a>, <a>IOS app store</a> etc.). Once you have the plugin, translate the page to the desired language. You will notice that the only thing that changes on the page are the "copy" buttons above the source text. Click the copy button to put the translated text in the field, then continue editing.</p> 
+<p><em>Note: trasnslation best practice is to always have machine-translated text carefully reviewed and edited by a human translator.</em></p>
+</div>
+    
+<h2 style="font-weight: normal">Interface translation</h2>
+    <p>This interface allows a translator to search for specific translated and untranslated strings, and is used when creating or editing translations. (Note: Because translation tasks involves many strings, it may be more convenient to <a href="/admin/config/regional/translate/export">export</a> strings for offline editing in a desktop Gettext translation editor). Searches may be limited to strings in a specific language.</p>
+        
+  <ul class="buttons">
+      <li class="inline">
+        <a href="import.html" class="button button--primary" style="margin-right: 10px"><span style="font-weight:bold;">+ </span>Import</a>
+      </li>
+      <li class="inline">
+        <a href="export.html" class="button button--primary "><span style="font-weight:bold;">&#8594;</span> Export</a>
+      </li>
+    </ul>
+    
+<details closed>
+        <summary>Filter translatable strings</summary>
+    <div class="form-item form-type-search form-item-string inline" style="margin-right:10px;">
+        <label for="edit-string">String contains</label> <input aria-describedby="edit-string--description" type="search" id="edit-string" name="string" value="" size="60" maxlength="128" class="form-search" />
+    </div>
+    <div class="form-item form-type-select form-item-langcode inline" style="margin-right:10px;">
+        <label for="edit-langcode">Translation language</label> 
+        <select id="edit-langcode" name="langcode" size="0" class="form-select">
+        <option value="ast" selected="selected">Asturian</option>
+        </select>
+    </div>
+    <div class="form-item form-type-select form-item-translation inline" style="margin-right:10px;">
+        <label for="edit-translation">Search in</label> 
+        <select id="edit-translation" name="translation" size="0" class="form-select">
+        <option value="all" selected="selected">Both translated and untranslated strings</option>
+        <option value="translated">Only translated strings</option><option value="untranslated">Only untranslated strings</option>
+        </select>
+    </div>
+    <div class="form-item form-type-select form-item-customized inline" style="margin-right:10px;">
+        <label for="edit-customized">Translation type</label> 
+        <select id="edit-customized" name="customized" size="0" class="form-select">
+        <option value="all" selected="selected">All</option><option value="0">Non-customized translation</option>
+        <option value="1">Customized translation</option>
+        </select>
+    </div>
+    <div class="container-inline form-actions form-wrapper inline" id="edit-actions" style="margin-right:10px;">
+    	<input type="submit" id="edit-submit" name="op" value="Filter" class="button form-submit" />
+    </div>
+    </details> 
+     
+   <div>
+   <div>   
+    <table class="locale-translate-edit-table sticky-enabled responsive-enabled" id="translate-strings">
+        <tr><th>Source string <a href="#" class="copy" id="copy-strings">Copy all &#8594;</a></th><th>Updated string <a href="#" class="copy" id="copy-strings">Copy all &#8594;</a></th><th>Translation for Asturian</th> <th>Share <a href="#" class="copy" id="copy-strings">Share all &#8594;</a></th></tr></thead>
+        <tbody>
+        <tr>
+            <td><div id="edit-strings-1-original" class="form-item string">
+                <label class="element-invisible" for="edit-strings-1-original">Source string</label> An AJAX HTTP error occurred.<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+            </td>
+            <td>
+               An AJAX HTTP error has occurred.<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+            </td>
+            <td>
+                <div class="form-item string form-type-textarea form-item-strings-1-translations-0">
+                    <label class="element-invisible" for="edit-strings-1-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-1-translations-0" name="strings[1][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+                </div>
+            </td>
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+        <tr >
+            <td>
+                <div id="edit-strings-2-original" class="form-item string form-type-item form-item-strings-2-original">
+                    <label class="element-invisible" for="edit-strings-2-original">Source string</label> HTTP Result Code: !status<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+                </div>
+            </td>
+            <td>&nbsp;
+              
+            </td>
+            <td>
+                <div class="form-item string form-type-textarea form-item-strings-2-translations-0">
+                    <label class="element-invisible" for="edit-strings-2-translations-0">Translated string</label> 
+                    <div class="form-textarea-wrapper"><textarea id="edit-strings-2-translations-0" name="strings[2][translations][0]" rows="1" cols="60" class="textarea"></textarea>
+                    </div>
+                </div>
+            </td> 
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="edit-strings-3-original" class="form-item string form-type-item form-item-strings-3-original">
+                <label class="element-invisible" for="edit-strings-3-original">Source string</label> An AJAX HTTP request terminated abnormally.<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+                </div>
+            </td>
+            <td>&nbsp;
+            </td>
+            <td>
+                <div class="form-item string form-type-textarea form-item-strings-3-translations-0">
+                    <label class="element-invisible" for="edit-strings-3-translations-0">Translated string</label> 
+                    <div class="form-textarea-wrapper"><textarea id="edit-strings-3-translations-0" name="strings[3][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+                    </div>
+            </td>
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td> 
+        </tr>
+     	<tr >
+        	<td>
+        	<div id="edit-strings-4-original" class="form-item string form-type-item form-item-strings-4-original">
+     			<label class="element-invisible" for="edit-strings-4-original">Source string</label> Debugging information follows.<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    			</div>
+    	</td>
+          <td>&nbsp;
+            </td>
+        	<td>
+        	<div class="form-item string form-type-textarea form-item-strings-4-translations-0">
+     			<label class="element-invisible" for="edit-strings-4-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-4-translations-0" name="strings[4][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    			</div>
+    		</td> 
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+     	<tr >
+            <td>
+            	<div id="edit-strings-5-original" class="form-item string form-type-item form-item-strings-5-original">
+     				<label class="element-invisible" for="edit-strings-5-original">Source string</label> Path: !uri<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    			</div>
+    	</td>
+          <td>&nbsp;
+            </td>
+        	<td>
+            	<div class="form-item string form-type-textarea form-item-strings-5-translations-0">
+     				<label class="element-invisible" for="edit-strings-5-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-5-translations-0" name="strings[5][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    			</div>
+    		</td> 
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+     	<tr>
+        	<td>
+            	<div id="edit-strings-6-original" class="form-item string form-type-item form-item-strings-6-original">
+					<label class="element-invisible" for="edit-strings-6-original">Source string</label> StatusText: !statusText
+				</div>
+		</td>
+          <td>&nbsp;
+            </td>
+        	<td>
+            	<div class="form-item string form-type-textarea form-item-strings-6-translations-0">
+     				<label class="element-invisible" for="edit-strings-6-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-6-translations-0" name="strings[6][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    			</div>
+    		</td> 
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+     	<tr>
+			<td>
+				<div id="edit-strings-7-original" class="form-item string form-type-item form-item-strings-7-original">
+					<label class="element-invisible" for="edit-strings-7-original">Source string</label> ResponseText: !responseText<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+				</div>
+		</td>
+          <td>&nbsp;
+            </td>
+        	<td>
+            	<div class="form-item string form-type-textarea form-item-strings-7-translations-0">
+    				<label class="element-invisible" for="edit-strings-7-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-7-translations-0" name="strings[7][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    			</div>
+    		</td> 
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+		<tr >
+        	<td>
+            	<div id="edit-strings-8-original" class="form-item string form-type-item form-item-strings-8-original">
+     				<label class="element-invisible" for="edit-strings-8-original">Source string</label> ReadyState: !readyState<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    			</div>
+    	</td>
+          <td>&nbsp;
+            </td>
+        	<td>
+            	<div class="form-item string form-type-textarea form-item-strings-8-translations-0">
+     				<label class="element-invisible" for="edit-strings-8-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-8-translations-0" name="strings[8][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    			</div>
+    		</td> 
+            <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+        </tr>
+     	<tr >
+        	<td>
+            	<div id="edit-strings-9-original" class="form-item string form-type-item form-item-strings-9-original">
+     <label class="element-invisible" for="edit-strings-9-original">Source string</label> Show all columns<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    </div>
+    </td>
+      <td>&nbsp;
+            </td>
+            <td><div class="form-item string form-type-textarea form-item-strings-9-translations-0">
+     <label class="element-invisible" for="edit-strings-9-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-9-translations-0" name="strings[9][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    </div>
+    </td> 
+    <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+            </tr>
+     <tr >  <td><div id="edit-strings-10-original" class="form-item string form-type-item form-item-strings-10-original">
+     <label class="element-invisible" for="edit-strings-10-original">Source string</label> Hide unimportant columns<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    </div>
+    </td>  <td>&nbsp;
+            </td><td><div class="form-item string form-type-textarea form-item-strings-10-translations-0">
+     <label class="element-invisible" for="edit-strings-10-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-10-translations-0" name="strings[10][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    </div>
+    </td> 
+    <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+            </tr>
+     <tr ><td><div id="edit-strings-11-original" class="form-item string form-type-item form-item-strings-11-original">
+     <label class="element-invisible" for="edit-strings-11-original">Source string</label>Show table cells that were hidden to make the table fit within a small screen.<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    </div>
+    </td>  <td>&nbsp;
+            </td><td><div class="form-item string form-type-textarea form-item-strings-11-translations-0">
+     <label class="element-invisible" for="edit-strings-11-translations-0">Translated string</label> 
+     <div class="form-textarea-wrapper"><textarea id="edit-strings-11-translations-0" name="strings[11][translations][0]" rows="1" cols="60" class="textarea"></textarea>
+     </div>
+    </div>
+    </td> 
+    <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+            </tr>
+     <tr ><td><div id="edit-strings-12-original" class="form-item string form-type-item form-item-strings-12-original">
+     <label class="element-invisible" for="edit-strings-12-original">Source string</label> Hide<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    </div>
+    </td>  <td>&nbsp;
+            </td><td><div class="form-item string form-type-textarea form-item-strings-12-translations-0">
+     <label class="element-invisible" for="edit-strings-12-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-12-translations-0" name="strings[12][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    </div>
+    </td> 
+    <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+            </tr>
+     <tr ><td><div id="edit-strings-13-original" class="form-item string form-type-item form-item-strings-13-original">
+     <label class="element-invisible" for="edit-strings-13-original">Source string</label> Show<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    </div>
+    </td>  <td>&nbsp;
+            </td><td><div class="form-item string form-type-textarea form-item-strings-13-translations-0">
+     <label class="element-invisible" for="edit-strings-13-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-13-translations-0" name="strings[13][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    </div>
+    </td> 
+    <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+            </tr>
+     <tr ><td><div id="edit-strings-14-original" class="form-item string form-type-item form-item-strings-14-original">
+     <label class="element-invisible" for="edit-strings-14-original">Source string</label> Hide description<a href="#" class="copy" id="copy-strings">Copy &#8594;</a>
+    </div>
+    </td>  <td>&nbsp;
+            </td><td><div class="form-item string form-type-textarea form-item-strings-14-translations-0">
+     <label class="element-invisible" for="edit-strings-14-translations-0">Translated string</label> <div class="form-textarea-wrapper"><textarea id="edit-strings-14-translations-0" name="strings[14][translations][0]" rows="1" cols="60" class="textarea"></textarea></div>
+    </div>
+    </td> 
+    <td> 
+            <a href="#" class="copy" id="copy-strings">Share &#8594;</a>
+            </td>
+            </tr>
+    </tbody>
+    </table></table>
+    </div>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>

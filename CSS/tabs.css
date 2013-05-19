@@ -1,0 +1,103 @@
+.tabs:after {
+  content: '';
+  display: block;
+  bottom: 1px;
+  border-bottom: 1px solid #b3b3b3;
+}
+.tabs__group {
+  position: relative;
+  display: table;
+  border-top: 1px solid #b3b3b3;
+  background-color: #f2f2f0;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: -1px;
+  padding-left:0;
+}
+.tabs__tab {
+  float: left;
+  position: relative;
+  list-style:none;
+}
+.tabs__tab.is-active {
+  z-index: 15;
+}
+.tabs__tab__link {
+  border-top: 1px solid #b3b3b3;
+  border-left: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  margin-bottom: 1px;
+  border-top-left-radius: 5px;
+  color: #0074bd;
+  display: block;
+  font-size: 0.813rem;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.125rem;
+  line-height: 18px;
+  padding: 0.375em 0.938em;
+  padding: 6px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: -1px;
+}
+.tabs__tab__link:hover {
+  background-color: #fff;
+  color: #007ac7;
+  text-decoration: none;
+}
+.tabs__tab.is-active .tabs__tab__link {
+  background-color: #ffffff;
+  border-right: 1px solid #b3b3b3;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 0;
+  border-top-right-radius: 5px;
+  color: #004f80;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:    0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow:         0 0 3px rgba(0, 0, 0, 0.3);
+}
+.tabs__tab.is-active ~ .tabs__tab .tabs__tab__link {
+  border-left: 0;
+  border-right: 1px solid #b3b3b3;
+  border-radius: 0 5px 0 0;
+}
+#secondary-tabs-wrapper { 
+  border-bottom: 1px solid #d9d8d4;
+  margin:0;
+  padding:0;
+}
+.secondary-tabs {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin:0;
+  padding-left: 20px;
+}
+.secondary-tabs li {
+ list-style:none;
+}
+.secondary-tabs__tab {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  z-index: 5;
+}
+.secondary-tabs__tab__link {
+  border-bottom: 1px solid transparent;
+  color: #0074bd;
+  display: block;
+  margin-left: 15px;
+  padding: 15px 0 5px 0;
+  text-decoration: none !important;
+}
+.secondary-tabs__tab.is-active .secondary-tabs__tab__link {
+  border-bottom-color: #004f80;
+  color: #004f80;
+}
+.secondary-tabs__tab__link:focus,
+.secondary-tabs__tab__link:hover {
+  color: #008ee6 !important;
+  border-bottom-color: #008ee6 !important;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multilingual Prototype: Translation Export</title>
+  <link rel="stylesheet" type="text/css" href="CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/form-items.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/buttons.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  <script src="../javascript/jquery-ui.min.js"></script>
+  <script src="javascript/multilingual.js"></script>
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+	<div id="container">
+         <div id="branding">
+                 <h1 class="page-title">Region & language</h1>
+        	<nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Configuration</a></li><li><a href="/admin/config/regional" title="Regional settings, localization and translation.">Region & language</a></li></ol></nav>              
+<p></p>
+    </div>
+    
+<div id="contentarea">
+  <div id="translation-settings">
+	<h3>Translation settings for Asturian</h3>
+		<form class="locale-translate-settings" action="/admin/config/regional/translate/settings" method="post" id="locale-translate-settings" accept-charset="UTF-8">
+        <div>
+            <div class="form-item form-type-radios form-item-update-interval-days">
+            <label class="label--inline" for="edit-update-interval-days">Check for updates</label> 
+                <div class="description" id="edit-update-interval-days--description">Select how frequently you want to check for new interface translations for your currently installed modules and themes. 
+                <a href="/admin/reports/translations/check">Check updates now</a>.
+                </div>
+            </div>
+            <div id="edit-update-interval-days" class="form-radios"><div class="form-item form-type-radio form-item-update-interval-days">
+                <input type="radio" id="edit-update-interval-days-0" name="update_interval_days" value="0" checked="checked" class="form-radio inline" /> <label class="label--inline" for="edit-update-interval-days-0">Never (manually)</label>
+            </div>
+            <div class="form-item form-type-radio form-item-update-interval-days">
+                <input aria-describedby="edit-update-interval-days--description" type="radio" id="edit-update-interval-days-1" name="update_interval_days" value="1" class="form-radio inline" /> <label class="label--inline" for="edit-update-interval-days-1">Daily</label>
+            </div>
+            <div class="form-item form-type-radio form-item-update-interval-days">
+                <input aria-describedby="edit-update-interval-days--description" type="radio" id="edit-update-interval-days-7" name="update_interval_days" value="7" class="form-radio inline" /> <label class="label--inline" for="edit-update-interval-days-7">Weekly</label>
+			</div>
+		</div>
+
+		<div class="form-item form-type-checkbox form-item-check-disabled-modules">
+			<input type="checkbox" id="edit-check-disabled-modules" name="check_disabled_modules" value="1" class="form-checkbox" /> <label class="label--inline" for="edit-check-disabled-modules">Check for updates of disabled modules and themes</label>
+		</div>
+		<div class="form-item form-type-radios form-item-use-source">
+ 			<label class="label--small" for="edit-use-source">Translation source</label> 
+		<div class="description" id="edit-use-source--description">The source of translation files for automatic interface translation. Translation files are stored locally in the  <em class="placeholder">sites/default/files/translations</em> directory. You can change this directory on the <a href="/admin/config/media/file-system">File system</a> configuration page.
+        </div>
+		</div>
+		<div id="edit-use-source" class="form-radios">
+        	<div class="form-item form-type-radio form-item-use-source">
+ 				<input type="radio" id="edit-use-source-remote-and-local" name="use_source" value="remote_and_local" checked="checked" class="form-radio inline" /> <label class="label--inline" class="option" for="edit-use-source-remote-and-local">Drupal translation server and local files</label>
+			</div>
+            <div class="form-item form-type-radio form-item-use-source">
+                <input type="radio" id="edit-use-source-local" name="use_source" value="local" class="form-radio inline" /> <label class="label--inline" for="edit-use-source-local">Local files only</label>
+            </div>
+		</div>
+		<div class="form-item form-type-radios form-item-overwrite">
+ 			<label class="label--inline" for="edit-overwrite">Import behaviour</label> <div id="edit-overwrite" class="form-radios">
+			<div class="description" id="edit-overwrite--description">How to treat existing translations when automatically updating the interface translations.</div>
+            <div class="form-item form-type-radio form-item-overwrite">
+ 				<input type="radio" id="edit-overwrite-none" name="overwrite" value="none" class="form-radio inline" /> 
+                <label class="label--inline" for="edit-overwrite-none">Don't overwrite existing translations.</label>
+			</div>
+			</div>
+			<div class="form-item form-type-radio form-item-overwrite">
+ 				<input type="radio" id="edit-overwrite-non-customized" name="overwrite" value="non_customized" checked="checked" class="form-radio inline" /> <label class="label--inline" for="edit-overwrite-non-customized">Only overwrite imported translations, customized translations are kept.</label>
+			</div>
+			<div class="form-item form-type-radio form-item-overwrite">
+ 				<input type="radio" id="edit-overwrite-all" name="overwrite" value="all" class="form-radio inline" /> <label class="label--inline" for="edit-overwrite-all">Overwrite existing translations.</label>
+		</div>
+	</div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

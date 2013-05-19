@@ -1,0 +1,107 @@
+/**
+ * @file
+ * Tables
+ *
+ * @todos:
+ * 1. determine what should be base (if any)
+ * 2. separate base, structure and skin
+ * 3. determine best names for classes.
+ */
+
+/* Possible some of these base styles should be moved into new classes
+   to be applied to the markup */
+table {
+  width: 100%;
+  font-size: 0.75rem; 
+  line-height: 1.125rem; /* 18px */
+}
+
+thead {
+  background: #f5f5f2;
+  border: solid #bfbfba;
+  border-width: 1px 0;
+  text-transform:uppercase;
+  letter-spacing: .1em;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e6e4df;
+}
+tbody tr:hover {
+  background: #f7fcff;
+}
+
+th {
+  padding: 0 12px;
+  text-align: left;
+  position: relative;
+  color: #333;
+}
+
+td {
+  padding: 10px 14px 11px;
+  text-align: left;
+}
+
+/* A more descriptive name might be appropriate */
+.table-header {
+  display: block;
+  padding: 11px 16px 9px 0;
+  /*border-bottom: 2px double transparent;*/
+  /*margin-bottom: -1px;*/
+  background: transparent no-repeat right center;
+  text-decoration: none !important;
+}
+/**
+ * Pseudo-element forces the <a> to 100% height and allows the active-bar
+ * effect to work no matter the height of the table headers.
+ *
+ * 1. Must match the left/right padding on the parent <th>
+ */
+.table-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 12px; /* 1. */
+  right: 12px; /* 1. */
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s;
+}
+
+.table-header--sorting {
+  cursor: pointer;
+  color: #0074bd;
+}
+.table-header--sorting.is-active {
+  background-image: url(../../_images/table-header-link-active.png);
+  color: #004875;
+}
+.table-header--sorting.is-active:after {
+  border-bottom-color: #004875;
+}
+.table-header--sorting:focus,
+.table-header--sorting:hover {
+  background-image: url(../../_images/table-header-link.png);
+  color: #008ee6;
+}
+.table-header--sorting:focus:after,
+.table-header--sorting:hover:after {
+  border-bottom-color: #008ee6;
+}
+
+/**
+ * Responsive tables.
+ */
+@media screen and (max-width: 28.125em) { /* 450px */
+  .col-priority-medium,
+  .col-priority-low {
+    display: none;
+  }
+}
+@media screen and (max-width: 45em) { /* 720px */
+  .col-priority-low {
+    display: none;
+  }
+}

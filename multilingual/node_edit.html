@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Node edit — Multilingual Prototype</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/form-items.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/buttons.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  <script src="../javascript/jquery-ui.min.js"></script>
+  <script src="../javascript/multilingual.js"></script>
+  
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+<div id="container">
+	<div id="branding">           
+        <h1 class="page-title notranslate">An article written in English</h1>
+        <nav role="navigation" class="breadcrumb notranslate"><h2 class="element-invisible">You are here</h2><ol><li><a href="#">Home</a></li><li><a href="#">Administration</a></li><li><a href="#" title="Administer settings.">Content</a></li></ol></nav>   
+        <ul class="tabs__group notranslate">
+            <li class="tabs__tab">
+              <a class="tabs__tab__link" href="#">View</a>
+            </li>
+            <li class="tabs__tab is-active">
+              <a class="tabs__tab__link" href="#">Edit</a>
+            </li>
+        </ul>
+	</div>
+<div id="contentarea" class="layout-region layout-region-node-main">
+<details closed>
+<summary id="helpsummary" class="notranslate">Content translation help</summary>
+<div id="helptext">
+    <ul id="help-list">
+        <li class="inline-help">Type your translation of the source to it's corresponding field, or copy the the source to the field for similar languages. <a href="#">More...</a></li>
+        <li class="inline-help">For machine translation, install a browser plugin, translate the page to the desired language and click "apply browser translation". <a href="#">More...</a></li> 
+        <li class="inline-help"><strong>Note: <em>to avoid errors always have machine-translated text reviewed and edited by a human translator.</em></strong> <a href="#">More...</a></li>
+    </ul>
+</div>
+</details>
+
+<form accept-charset="UTF-8">
+<div style="clear:both;">
+<p><a href="#" id="trans-toggle-on" class="notranslate">Hide source text</a></p>
+<p><a href="#" id="trans-toggle-off" class="notranslate">Show source text</a></p>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    	<label class="label notranslate">Title</label><span class="language-info notranslate">Language: EN (source)</span><a href="#" class="copy notranslate" id="copy-title">Copy &#8594;</a>
+    	<div id="title-sourcetext" class="notranslate"><p>An article written in English</p></div>
+    </div>
+    <div class="field-translation">
+        <div class="form-item notranslate" id="title-field">
+        <label class="label notranslate"  for="edit-title">Title*</label> <a href="#" class="copy">Apply translation</a>
+        <input type="text" class="input-text notranslate" name="title" id="title-textfield" value="" size="60" 
+        maxlength="255" required aria-required="true" />
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    <label class="label notranslate">Body</label><span class="language-info notranslate">Language: EN (source)</span><a href="#" class="copy notranslate" id="copy-body">Copy &#8594;</a>
+		<div id="bodysource" class="notranslate">
+        <p>When you cease to make a contribution you begin to die. I am only one, but still I am one. I cannot do everything, but still I can do something; and because I cannot do everything, I will not refuse to do something I can do. Eliminate something superfluous from your life. Break a habit. Do something that makes you feel insecure. Carry out an action with complete attention and intensity as if it were your last One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man. A man may fall many times but he will not be a failure until he says someone pushed him. Do not play for safety; it is the most dangerous thing in the world.</p>
+<p>
+Failure should be our teacher, not our undertaker. Failure is delay, not defeat. It is a temporary detour, not a dead end. Failure is something we can avoid only by saying nothing, doing nothing, and being nothing. One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man. Until you try, you do not know what you cannot do. When you cease to make a contribution you begin to die. We can try to avoid making choices by doing nothing, but even that is a decision.</p>
+<p>
+Eliminate something superfluous from your life. Break a habit. Do something that makes you feel insecure. Carry out an action with complete attention and intensity as if it were your last Nothing comes from doing nothing. Instead of seeing the rug being pulled from under us, we can learn to dance on a shifting carpet. Stop freewheeling, get into gear, and do something with your life. There are so many avenues to explore, so why not explore them? Never be afraid to step into the unknown, into the new. Do it fearlessly, always expecting the very best as you do so. People are always blaming their circumstances for what they are. I do not believe in circumstances. The people who get on in this world are the people who get up and look for the circumstances they want, and, if they cannot find them, make them.</p>
+</div>
+<div id="body-stash" style="dislpay:none">
+<p>When you cease to make a contribution you begin to die. I am only one, but still I am one. I cannot do everything, but still I can do something; and because I cannot do everything, I will not refuse to do something I can do. Eliminate something superfluous from your life. Break a habit. Do something that makes you feel insecure. Carry out an action with complete attention and intensity as if it were your last One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man. A man may fall many times but he will not be a failure until he says someone pushed him. Do not play for safety; it is the most dangerous thing in the world.</p>
+<p>
+Failure should be our teacher, not our undertaker. Failure is delay, not defeat. It is a temporary detour, not a dead end. Failure is something we can avoid only by saying nothing, doing nothing, and being nothing. One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man. Until you try, you do not know what you cannot do. When you cease to make a contribution you begin to die. We can try to avoid making choices by doing nothing, but even that is a decision.</p>
+<p>
+Eliminate something superfluous from your life. Break a habit. Do something that makes you feel insecure. Carry out an action with complete attention and intensity as if it were your last Nothing comes from doing nothing. Instead of seeing the rug being pulled from under us, we can learn to dance on a shifting carpet. Stop freewheeling, get into gear, and do something with your life. There are so many avenues to explore, so why not explore them? Never be afraid to step into the unknown, into the new. Do it fearlessly, always expecting the very best as you do so. People are always blaming their circumstances for what they are. I do not believe in circumstances. The people who get on in this world are the people who get up and look for the circumstances they want, and, if they cannot find them, make them.</p>
+</div>
+    </div>
+    <div class="field-translation">
+        <div class="form-item form-type-textarea" id="body">
+         <label class="label notranslate" for="edit-body-und-0-value">Body</label> <a href="#" class="copy" id="apply">Apply translation</a>
+         <div id="mock-wysiwyg"></div>
+         <textarea class="textarea highlighted" id="edit-body" rows="9" cols="60" placeholder=""></textarea>
+            <div id="text-help">
+             <p><a href="#" target="_blank" style="float: right" class="notranslate">More information about text formats</a></p>
+            <label for="edit-body-und-0-format--2" class="notranslate">Text format</label> 
+            <select class="filter-list form-select notranslate" style="display:inline" id="edit-body-und-0-format--2" name="body[und][0][format]">
+            <option class="notranslate" value="filtered_html" selected="selected">Filtered HTML</option>
+            <option class="notranslate" value="full_html">Full HTML</option>
+            <option class="notranslate" value="plain_text">Plain text</option></select>
+        	    </div>
+      	   </div>
+		</div>
+	</div>
+</div>
+    
+<hr>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    	<label class="label notranslate">Tags</label><span class="language-info notranslate">Language: EN (source)</span><a href="#" class="copy notranslate">Copy &#8594;</a>
+        <p class="notranslate">flexitarian, seitan, keffiyeh</p>
+    </div>
+    	<div class="field-translation notranslate">
+			<div class="field-type-taxonomy-term-reference field-name-field-tags field-widget-taxonomy-autocomplete form-wrapper" id="edit-field-tags">
+                <div class="form-item form-type-textfield" id="tags-field">
+                    <label class="label notranslate"  for="edit-field-tags-und">Tags</label> <a href="#" class="copy" id="apply">Apply translation</a>
+                    <input aria-describedby="edit-field-tags-und--description" class="input-text notranslate" type="text" id="edit-field-tags-und" name="field_tags[und]" value="" size="60" maxlength="1024" placeholder="" /><input class="autocomplete" id="edit-field-tags-und-autocomplete" type="hidden" value="http://sa807776c2cd5579.s3.simplytest.me/taxonomy/autocomplete/field_tags" />
+                    <div class="description notranslate" id="edit-field-tags-und--description">Enter a comma-separated list of words to describe your content.</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="field-source-and-translation">
+	<div class="field-source">
+    	<label class="label notranslate">Image</label><span class="language-info notranslate">Language: EN (source)</span><a href="#" class="copy notranslate">Copy &#8594;</a>
+        <p class="notranslate">This field is not translatable</p>
+    </div>
+    	<div class="field-translation">
+            <div class="field-type-image field-name-field-image field-widget-image-image form-wrapper" id="edit-field-image">
+            <div id="edit-field-image-und-0-upload-ajax-wrapper"><div class="form-item form-type-managed-file form-item-field-image-und-0">
+         <label class="label notranslate"  for="edit-field-image-und-0-upload">Image</label> 
+         <div class="image-widget form-managed-file clearfix">
+         <div class="image-widget-data">
+         <input type="file" id="browse" class="input-text"  />
+         <input formnovalidate type="submit" id="upload-button" name="upload_button" value="Upload" class="button form-submit notranslate" /></div>
+         </div>
+        <div class="description notranslate" id="edit-field-image-und-0-upload--description">Upload an image to go with this article. Files must be less than <strong>2 MB</strong>. Allowed file types: <strong>png gif jpg jpeg</strong>.</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<div class="layout-region layout-region-node-secondary">
+    <div class="entity-meta form-wrapper notranslate" id="edit-advanced">
+    <div class="entity-meta-header form-wrapper" id="edit-meta">
+    <div class="changed container-inline form-item form-type-item form-item-changed inline" id="edit-changed--2">
+ <label for="edit-changed--2"class="notranslate inline">Last saved</label> Not saved yet
+</div>
+<div class="author container-inline form-item form-type-item form-item-author inline" id="edit-author--2">
+ <label for="edit-author--2" class="notranslate inline">Author</label> admin
+</div>
+<div class="node-form-revision-information form-wrapper notranslate" id="edit-revision-information"><div class="form-item form-type-checkbox form-item-revision">
+ <input type="checkbox" id="edit-revision--2" name="revision" value="1" class="form-checkbox" /> <label class="option notranslate inline" for="edit-revision--2" class="notranslate inline">Create new revision</label>
+</div>
+<div class="form-item form-type-textarea form-item-log" style="display:none">
+ <label for="edit-log" class="notranslate">Revision log message</label> 
+ <div class="form-textarea-wrapper"><textarea aria-describedby="edit-log--description" id="edit-log" name="log" rows="4" cols="60" class="form-textarea resize-vertical"></textarea></div>
+<div class="description notranslate" id="edit-log--description">Briefly describe the changes you have made.</div>
+</div>
+</div></div><details class="menu-link-form form-wrapper notranslate" closed id="edit-menu"><summary role="button" aria-controls="edit-menu">Menu settings</summary>
+<div class="details-wrapper"><div class="form-item form-type-checkbox form-item-menu-enabled notranslate">
+ <input type="checkbox" id="edit-menu-enabled" name="menu[enabled]" value="1" class="form-checkbox" /> <label class="option notranslate" for="edit-menu-enabled">Provide a menu link</label>
+</div>
+<div id="edit-menu--2" class="form-wrapper notranslate"><div class="form-item form-type-textfield form-item-menu-link-title">
+ <label for="edit-menu-link-title">Menu link title</label> <input type="text" id="edit-menu-link-title" name="menu[link_title]" value="" size="60" maxlength="128" class="form-text" />
+</div>
+<div class="form-item form-type-textarea form-item-menu-description">
+ <label for="edit-menu-description">Description</label> <div class="form-textarea-wrapper notranslate"><textarea aria-describedby="edit-menu-description--description" id="edit-menu-description" name="menu[description]" rows="1" cols="60" class="form-textarea resize-vertical"></textarea></div>
+<div class="description notranslate" id="edit-menu-description--description">Shown when hovering over the menu link.</div>
+</div>
+<div class="form-item form-type-select form-item-menu-parent notranslate">
+ <label for="edit-menu-parent">Parent item</label> <select class="menu-parent-select form-select notranslate" id="edit-menu-parent" name="menu[parent]"><option value="main:0" selected="selected">&lt;Main navigation&gt;</option><option value="main:248">-- Home</option></select>
+</div>
+<div class="form-item form-type-select form-item-menu-weight notranslate">
+ <label for="edit-menu-weight">Weight</label> <select aria-describedby="edit-menu-weight--description" id="edit-menu-weight" name="menu[weight]" class="form-select"><option value="-50">-50</option><option value="-49">-49</option><option value="-48">-48</option><option value="-47">-47</option><option value="-46">-46</option><option value="-45">-45</option><option value="-44">-44</option><option value="-43">-43</option><option value="-42">-42</option><option value="-41">-41</option><option value="-40">-40</option><option value="-39">-39</option><option value="-38">-38</option><option value="-37">-37</option><option value="-36">-36</option><option value="-35">-35</option><option value="-34">-34</option><option value="-33">-33</option><option value="-32">-32</option><option value="-31">-31</option><option value="-30">-30</option><option value="-29">-29</option><option value="-28">-28</option><option value="-27">-27</option><option value="-26">-26</option><option value="-25">-25</option><option value="-24">-24</option><option value="-23">-23</option><option value="-22">-22</option><option value="-21">-21</option><option value="-20">-20</option><option value="-19">-19</option><option value="-18">-18</option><option value="-17">-17</option><option value="-16">-16</option><option value="-15">-15</option><option value="-14">-14</option><option value="-13">-13</option><option value="-12">-12</option><option value="-11">-11</option><option value="-10">-10</option><option value="-9">-9</option><option value="-8">-8</option><option value="-7">-7</option><option value="-6">-6</option><option value="-5">-5</option><option value="-4">-4</option><option value="-3">-3</option><option value="-2">-2</option><option value="-1">-1</option><option value="0" selected="selected">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option></select>
+<div class="description notranslate" id="edit-menu-weight--description">Menu links with smaller weights are displayed before links with larger weights.</div>
+</div>
+</div></div></details>
+<details class="path-form form-wrapper notranslate" id="edit-path"><summary role="button" aria-controls="edit-path">URL path settings</summary><div class="details-wrapper notranslate"><div class="form-item form-type-textfield form-item-path-alias">
+ <label for="edit-path-alias">URL alias</label> <input aria-describedby="edit-path-alias--description" type="text" id="edit-path-alias" name="path[alias]" value="" size="60" maxlength="255" class="form-text" />
+<div class="description notranslate" id="edit-path-alias--description">The alternative URL for this content. Use a relative path without a trailing slash. For example, enter "about" for the about page.</div>
+</div>
+</div></details>
+<details class="comment-node-settings-form form-wrapper notranslate" id="edit-comment-settings"><summary role="button" aria-controls="edit-comment-settings">Comment settings</summary><div class="details-wrapper notranslate"><div class="form-item form-type-radios form-item-comment">
+ <label class="element-invisible notranslate" for="edit-comment">Comments</label> <div id="edit-comment" class="form-radios"><div class="form-item form-type-radio form-item-comment">
+ <input aria-describedby="edit-comment-2--description" type="radio" id="edit-comment-2" name="comment" value="2" checked="checked" class="form-radio" /> <label class="option notranslate" for="edit-comment-2">Open</label>
+<div class="description notranslate" id="edit-comment-2--description">Users with the "Post comments" permission can post comments.</div>
+</div>
+<div class="form-item form-type-radio form-item-comment">
+ <input aria-describedby="edit-comment-1--description" type="radio" id="edit-comment-1" name="comment" value="1" class="form-radio notranslate" /> <label class="option" for="edit-comment-1">Closed</label>
+<div class="description notranslate" id="edit-comment-1--description">Users cannot post comments.</div>
+</div>
+</div>
+</div>
+</div></details>
+<details class="node-form-author form-wrapper notranslate" id="edit-author"><summary role="button" aria-controls="edit-author">Authoring information</summary><div class="details-wrapper"><div class="form-item form-type-textfield form-item-name">
+ <label for="edit-name">Authored by</label> <input aria-describedby="edit-name--description" class="form-autocomplete form-text" type="text" id="edit-name" name="name" value="admin" size="60" maxlength="60" /><input class="autocomplete" id="edit-name-autocomplete" type="hidden" value="http://s9722fc9bb118fe6.s3.simplytest.me/user/autocomplete" />
+<div class="description" id="edit-name--description">Leave blank for <em class="placeholder">Anonymous</em>.</div>
+</div>
+<h4 class="label notranslate">Authored on</h4><div id="edit-date" class="container-inline notranslate"><div class="form-item form-type-date form-item-date-date">
+ <label class="element-invisible notranslate" for="edit-date-date">Date</label> <input aria-describedby="edit-date--description" title="Date (i.e. 2013-05-01)" type="date" id="edit-date-date" name="date[date]" value="" size="12" class="form-date" />
+</div>
+<div class="form-item form-type-date form-item-date-time notranslate">
+ <label class="element-invisible notranslate" for="edit-date-time">Time</label> <input aria-describedby="edit-date--description" title="Time (i.e. 13:33:38)" type="time" step="1" id="edit-date-time" name="date[time]" value="" size="12" class="form-date" />
+</div>
+</div></div></details>
+<details class="node-form-options form-wrapper notranslate" id="edit-options"><summary role="button" aria-controls="edit-options">Promotion options</summary><div class="details-wrapper notranslate"><div class="form-item form-type-checkbox form-item-promote">
+ <input type="checkbox" id="edit-promote" name="promote" value="1" checked="checked" class="form-checkbox" /> <label class="option notranslate" for="edit-promote">Promoted to front page</label>
+</div>
+<div class="form-item form-type-checkbox form-item-sticky notranslate">
+ <input type="checkbox" id="edit-sticky" name="sticky" value="1" class="form-checkbox" /> <label class="option notranslate" for="edit-sticky">Sticky at top of lists</label>
+</div>
+</div></details>
+</div></div>
+
+<div>
+	<ul class="buttons notranslate">
+      <li class="inline">
+        <a href="import.html" class="button button--primary" style="margin-right: 10px">Save & publish</a>
+      </li>
+      <li class="inline">
+        <a href="import.html" class="button button--secondary" style="margin-right: 10px">Preview</a>
+      </li>
+      <li class="inline">
+        <a href="export.html" class="button button--danger">Delete</a>
+      </li>
+    </ul>
+</div>
+
+</body>
+</html>

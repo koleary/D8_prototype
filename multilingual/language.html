@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multilingual Prototype: Translation Language</title>
+  <link rel="stylesheet" type="text/css" href="CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  
+  <script src="../javascript/jquery-ui.min.js"></script>
+  
+  <script src="entity.js"></script>
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+	<div id="container">
+         <div id="branding">
+                 <h1 class="page-title">Region & language</h1>
+        	<nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Configuration</a></li><li><a href="/admin/config/regional" title="Regional settings, localization and translation.">Region & language</a></li></ol></nav>              
+                 <ul class="tabs__group">
+            <li class="tabs__tab">
+              <a class="tabs__tab__link" href="region_&_language.html">Region</a>
+            </li>
+            <li class="tabs__tab">
+              <a class="tabs__tab__link is-active" href="language.html">Language</a>
+            </li>
+         </ul>
+	</div>
+    <div id="secondary-tabs-wrapper">
+    <ul class="secondary-tabs clearfix">
+      <li class="secondary-tabs__tab is-active"><a class="secondary-tabs__tab__link" href="language.html">Languages</a></li>
+      <li class="secondary-tabs__tab"><a class="secondary-tabs__tab__link" href="date_and_time_formats.html">o</a></li>
+    </ul>
+    </div>
+    
+    <div id="contentarea">
+      <p>With multiple languages enabled, registered users may select their preferred language and authors can assign a specific language to content.
+      </p>
+      <p>Interface translations are automatically imported when a language is added, or when new modules or themes are enabled. The report, Available translation updates, shows the status. Interface text can be customized.</p>
+            <ul class="action-links">
+            <li><a href="/admin/config/regional/language/add" class="button button-action">Add language</a></li>
+            </ul>    
+            <form class="language-admin-overview-form" action="/admin/config/regional/language" method="post" id="language-admin-overview-form" accept-charset="UTF-8">
+                  <div>
+                  <table id="edit-languages" class="sticky-enabled responsive-enabled">
+                 <thead><tr><th>Name</th><th>Default</th><th>Weight</th><th>Interface translation</th><th>Operations</th> </tr></thead>
+                <tbody>
+                 <tr class="draggable odd"><td>Burmese</td><td><div class="form-item form-type-radio form-item-site-default">
+                 <label class="element-invisible" for="edit-site-default-my">Set Burmese as default</label> <input type="radio" id="edit-site-default-my" name="site_default" value="my" class="form-radio" />
+                </div>
+                </td><td><div class="form-item form-type-select form-item-languages-my-weight">
+                 <label class="element-invisible" for="edit-languages-my-weight">Weight for Burmese</label> <select class="language-order-weight form-select" id="edit-languages-my-weight" name="languages[my][weight]"><option value="-30">-30</option><option value="-29">-29</option><option value="-28">-28</option><option value="-27">-27</option><option value="-26">-26</option><option value="-25">-25</option><option value="-24">-24</option><option value="-23">-23</option><option value="-22">-22</option><option value="-21">-21</option><option value="-20">-20</option><option value="-19">-19</option><option value="-18">-18</option><option value="-17">-17</option><option value="-16">-16</option><option value="-15">-15</option><option value="-14">-14</option><option value="-13">-13</option><option value="-12">-12</option><option value="-11">-11</option><option value="-10">-10</option><option value="-9">-9</option><option value="-8">-8</option><option value="-7">-7</option><option value="-6">-6</option><option value="-5">-5</option><option value="-4">-4</option><option value="-3">-3</option><option value="-2">-2</option><option value="-1">-1</option><option value="0" selected="selected">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+                </div>
+                </td><td><div class="dropbutton-wrapper"><div class="dropbutton-widget"><ul class="dropbutton"><li class="edit odd first"><a href="/admin/config/regional/language/edit/my">edit</a></li><li class="delete even last"><a href="/admin/config/regional/language/delete/my">delete</a></li></ul></div></div></td><td><a href="/admin/config/regional/translate/translate?langcode=my">0/45 (0%)</a></td> </tr>
+                 <tr class="draggable even"><td>English</td><td><div class="form-item form-type-radio form-item-site-default">
+                 <label class="element-invisible" for="edit-site-default-en">Set English as default</label> <input type="radio" id="edit-site-default-en" name="site_default" value="en" checked="checked" class="form-radio" />
+                </div>
+                </td><td><div class="form-item form-type-select form-item-languages-en-weight">
+                 <label class="element-invisible" for="edit-languages-en-weight">Weight for English</label> <select class="language-order-weight form-select" id="edit-languages-en-weight" name="languages[en][weight]"><option value="-30">-30</option><option value="-29">-29</option><option value="-28">-28</option><option value="-27">-27</option><option value="-26">-26</option><option value="-25">-25</option><option value="-24">-24</option><option value="-23">-23</option><option value="-22">-22</option><option value="-21">-21</option><option value="-20">-20</option><option value="-19">-19</option><option value="-18">-18</option><option value="-17">-17</option><option value="-16">-16</option><option value="-15">-15</option><option value="-14">-14</option><option value="-13">-13</option><option value="-12">-12</option><option value="-11">-11</option><option value="-10">-10</option><option value="-9">-9</option><option value="-8">-8</option><option value="-7">-7</option><option value="-6">-6</option><option value="-5">-5</option><option value="-4">-4</option><option value="-3">-3</option><option value="-2">-2</option><option value="-1">-1</option><option value="0" selected="selected">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+                </div>
+                </td><td><div class="dropbutton-wrapper"><div class="dropbutton-widget"><ul class="dropbutton"><li class="edit odd first last"><a href="/admin/config/regional/language/edit/en">edit</a></li></ul></div></div></td><td>not applicable</td> </tr>
+                 <tr class="draggable odd"><td>Lolspeak</td><td><div class="form-item form-type-radio form-item-site-default">
+                 <label class="element-invisible" for="edit-site-default-xx-lolspeak">Set Lolspeak as default</label> <input type="radio" id="edit-site-default-xx-lolspeak" name="site_default" value="xx-lolspeak" class="form-radio" />
+                </div>
+                </td><td><div class="form-item form-type-select form-item-languages-xx-lolspeak-weight">
+                 <label class="element-invisible" for="edit-languages-xx-lolspeak-weight">Weight for Lolspeak</label> <select class="language-order-weight form-select" id="edit-languages-xx-lolspeak-weight" name="languages[xx-lolspeak][weight]"><option value="-30">-30</option><option value="-29">-29</option><option value="-28">-28</option><option value="-27">-27</option><option value="-26">-26</option><option value="-25">-25</option><option value="-24">-24</option><option value="-23">-23</option><option value="-22">-22</option><option value="-21">-21</option><option value="-20">-20</option><option value="-19">-19</option><option value="-18">-18</option><option value="-17">-17</option><option value="-16">-16</option><option value="-15">-15</option><option value="-14">-14</option><option value="-13">-13</option><option value="-12">-12</option><option value="-11">-11</option><option value="-10">-10</option><option value="-9">-9</option><option value="-8">-8</option><option value="-7">-7</option><option value="-6">-6</option><option value="-5">-5</option><option value="-4">-4</option><option value="-3">-3</option><option value="-2">-2</option><option value="-1">-1</option><option value="0" selected="selected">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option></select>
+                </div>
+                </td><td><div class="dropbutton-wrapper"><div class="dropbutton-widget"><ul class="dropbutton"><li class="edit odd first"><a href="/admin/config/regional/language/edit/xx-lolspeak">edit</a></li><li class="delete even last"><a href="/admin/config/regional/language/delete/xx-lolspeak">delete</a></li></ul></div></div></td><td><a href="/admin/config/regional/translate/translate?langcode=xx-lolspeak">0/45 (0%)</a></td> </tr>
+                </tbody>
+                </table>
+        <input type="hidden" name="form_build_id" value="form-2Cp9cbu2lnNT1gwBZwSA05kTaewJj5NtzqstDlXO9XA" /><input type="hidden" name="form_token" value="_u4SnKhzjo5n_7f1I3UmdSn2wPd5G47A65XRj2yH1tw" /><input type="hidden" name="form_id" value="language_admin_overview_form" /><div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Save configuration" class="button form-submit" /></div></div></form> 
+    </div>
+</div>
+
+</body>
+</html>

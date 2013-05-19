@@ -1,0 +1,187 @@
+/**
+ * @file
+ * Buttons
+ *
+ * UI button. Apply these classes to any element (<link>, <button>, <input>,
+ * etc.) that should appear as a button.
+ */
+
+/**
+ * 1. Enable z-index on buttons.
+ * 2. Normalize 'box-sizing' so we can set width without worrying about
+ *    borders and padding.
+ * 3. Normalize 'line-height'; can’t be changed from 'normal' in Firefox 4+.
+ * 4. Allows full range of styling in Webkit and Gecko.
+ */
+.button {
+  display: inline-block;
+  position: relative;  /* 1 */
+  -webkit-box-sizing: border-box;  /* 2 */
+  -moz-box-sizing:    border-box;  /* " */
+  box-sizing:         border-box;  /* " */
+  text-align: center;
+  line-height: normal;  /* 3 */
+  cursor: pointer;
+  -webkit-appearance: none;  /* 4 */
+  -moz-appearance:    none;  /* " */
+}
+
+/* Prevent focus ring being covered by next siblings. */
+.button:focus {
+  z-index: 10;
+}
+
+/* ==========================================================================
+   Skin
+   ========================================================================== */
+
+.button {
+  padding: 0.2em 1.5em 0.25em;
+  border: 1px solid #a6a6a6;
+  border-radius: 20em;
+  background-color: #f2f1eb;
+  background-image: -webkit-linear-gradient(top, #f6f6f3, #e7e7df);
+  background-image:    -moz-linear-gradient(top, #f6f6f3, #e7e7df);
+  background-image:      -o-linear-gradient(top, #f6f6f3, #e7e7df);
+  background-image:   linear-gradient(to bottom, #f6f6f3, #e7e7df);
+  color: #262626;
+  text-decoration: none;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.6);
+  font-weight: 600;
+  font-size: 1em;
+  -webkit-transition: all 0.1s;
+  -moz-transition:    all 0.1s;
+  -o-transition:      all 0.1s;
+  transition:         all 0.1s;
+  -webkit-font-smoothing: antialiased;  /* prevent fat text in webkit */
+}
+.button:focus,
+.button:hover {
+  background-color: #f9f8f6;
+  background-image: -webkit-linear-gradient(top, #ffffff, #e9e9dd);
+  background-image:    -moz-linear-gradient(top, #ffffff, #e9e9dd);
+  background-image:      -o-linear-gradient(top, #ffffff, #e9e9dd);
+  background-image:   linear-gradient(to bottom, #ffffff, #e9e9dd);
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.button:focus {
+  border-color: #40b6ff;
+}
+.button:hover {
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+.button:active,
+.button.is-active {
+  background-color: #dfdfd9;
+  background-image: -webkit-linear-gradient(top, #d4d4cd, #ecebe5);
+  background-image:    -moz-linear-gradient(top, #d4d4cd, #ecebe5);
+  background-image:      -o-linear-gradient(top, #d4d4cd, #ecebe5);
+  background-image:   linear-gradient(to bottom, #d4d4cd, #ecebe5);
+  box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  -webkit-transition: none;
+  -moz-transition:    none;
+  -o-transition:      none;
+  transition:         none;
+}
+
+.button--primary {
+  border-color: #1e5c90;
+  background-image: -webkit-linear-gradient(top, #007bc6, #0071b8);
+  background-image:    -moz-linear-gradient(top, #007bc6, #0071b8);
+  background-image:      -o-linear-gradient(top, #007bc6, #0071b8);
+  background-image:   linear-gradient(to bottom, #007bc6, #0071b8);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.button--primary:focus,
+.button--primary:hover {
+  background-color: #2369a6;
+  background-image: -webkit-linear-gradient(top, #0c97ed, #1f86c7);
+  background-image:    -moz-linear-gradient(top, #0c97ed, #1f86c7);
+  background-image:      -o-linear-gradient(top, #0c97ed, #1f86c7);
+  background-image:   linear-gradient(to bottom, #0c97ed, #1f86c7);
+  color: #fff;
+}
+.button--primary:focus {
+  border-color: #0087db;
+}
+.button--primary:active,
+.button--primary.is-active {
+  background-image: -webkit-linear-gradient(top, #08639b, #0071b8);
+  background-image:    -moz-linear-gradient(top, #08639b, #0071b8);
+  background-image:      -o-linear-gradient(top, #08639b, #0071b8);
+  background-image:   linear-gradient(to bottom, #08639b, #0071b8);
+  border-color: #144b78;
+}
+
+.no-touch .button--small {
+  font-size: 13px;
+  font-size: 0.813rem;
+  padding: .075em 1em;
+}
+
+.button:disabled,
+.button.is-disabled {
+  border-color: #d4d4d4;
+  background: #ededed;
+  -webkit-box-shadow: none;
+  -moz-box-shadow:    none;
+  box-shadow:         none;
+  color: #5c5c5c;
+  font-weight: normal;
+  cursor: default;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.6);
+}
+
+/**
+ * Style a clickable/tappable element as a link. Duplicates the base style for the
+ * <a> tag, plus a reset for padding, borders and background.
+ */
+.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #0074bd; /* hsl(203, 100%, 37%) */
+  text-decoration: none;
+}
+.link:focus,
+.link:hover {
+  color: #008ee6; /* hsl(203, 100%, 45%) */
+  text-decoration: underline;
+}
+
+.link--danger {
+  color: #c72100;
+  text-decoration: underline;
+}
+.link--danger:focus,
+.link--danger:hover,
+.link--danger:active {
+  color: #ff2a00;
+}
+.link--danger:disabled,
+.link--danger.is-disabled {
+ color: #737373;
+ cursor: default;
+ text-decoration: none;
+ -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Provide a custom focus ring using box-shadow, but *only* when box-shadow is
+ * supported (testing with Modernizr). Otherwise, maintain the default browser
+ * focus style.
+ */
+.boxshadow .button:focus {
+  -webkit-box-shadow: 0 0 0.5em 0.1em hsla(203, 100%, 60%, 0.7);
+  -moz-box-shadow:    0 0 0.5em 0.1em hsla(203, 100%, 60%, 0.7);
+  box-shadow:         0 0 0.5em 0.1em hsla(203, 100%, 60%, 0.7);
+  outline: none;
+}
+.boxshadow .button:active:focus,
+.boxshadow .button.is-active:focus {
+  box-shadow:
+    0 0 0.5em 0.1em hsla(203, 100%, 60%, 0.7),
+    inset 0 1px 3px hsla(0, 0%, 0%, 0.2);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Region & language — Multilingual Prototype</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="../CSS/normalize.css" />
+  
+  <script src="../javascript/jquery.min.js"></script>
+  
+  <script src="../javascript/jquery-ui.min.js"></script>
+  
+  <script src="../entity.js"></script>
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+<div id="container">
+	<div id="branding">
+        <h1 class="page-title">Region & language</h1>
+        	<nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Configuration</a></li><li><a href="/admin/config/regional" title="Regional settings, localization and translation.">Region & language</a></li></ol></nav>              
+        <ul class="tabs__group">
+            <li class="tabs__tab is-active">
+              <a class="tabs__tab__link" href="region_&_language.html">Region</a>
+            </li>
+            <li class="tabs__tab">
+              <a class="tabs__tab__link" href="languages.html">Language</a>
+            </li>
+         </ul>
+	</div>
+    <div id="secondary-tabs-wrapper">
+    <ul class="secondary-tabs clearfix">
+      <li class="secondary-tabs__tab"><a class="secondary-tabs__tab__link" href="region_&_language.html">Regional settings</a></li>
+      <li class="secondary-tabs__tab is-active"><a class="secondary-tabs__tab__link" href="date_and_time_formats.html">Date & time formats</a></li>
+    </ul>
+    </div>
+<div id="contentarea">
+
+ <ul class="action-links"><li><a href="/admin/config/regional/date-time/formats/add" class="button button-action">Add format</a></li></ul>        <div  class="region region-content">
+      <div id="block-content"  class="block block-system">
+
+    
+  <div class="content">
+    <table class="sticky-enabled responsive-enabled">
+ <thead><tr><th aria-sort="ascending" class="active"><a href="/admin/config/regional/date-time?sort=desc&amp;order=Machine%20name" title="sort by Machine name">Machine name<img typeof="foaf:Image" src="http://sfe77ea42d62b582.s3.simplytest.me/core/themes/seven/images/arrow-desc.png" width="13" height="13" alt="sort descending" title="sort descending" /></a></th><th><a href="/admin/config/regional/date-time?sort=asc&amp;order=Name" title="sort by Name">Name</a></th><th><a href="/admin/config/regional/date-time?sort=asc&amp;order=Pattern" title="sort by Pattern">Pattern</a></th><th>Operations</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>long</td><td>Default Long Date</td><td>Monday, April 29, 2013 - 10:10</td><td><div class="dropbutton-wrapper"><div class="dropbutton-widget"><ul class="dropbutton"><li class="edit odd first"><a href="/admin/config/regional/date-time/formats/long/edit">edit</a></li><li class="delete even last"><a href="/admin/config/regional/date-time/formats/long/delete">delete</a></li></ul></div></div></td> </tr>
+ <tr class="even"><td>medium</td><td>Default Medium Date</td><td>Mon, 04/29/2013 - 10:10</td><td><div class="dropbutton-wrapper"><div class="dropbutton-widget"><ul class="dropbutton"><li class="edit odd first"><a href="/admin/config/regional/date-time/formats/medium/edit">edit</a></li><li class="delete even last"><a href="/admin/config/regional/date-time/formats/medium/delete">delete</a></li></ul></div></div></td> </tr>
+ <tr class="odd"><td>short</td><td>Default Short Date</td><td>04/29/2013 - 10:10</td><td><div class="dropbutton-wrapper"><div class="dropbutton-widget"><ul class="dropbutton"><li class="edit odd first"><a href="/admin/config/regional/date-time/formats/short/edit">edit</a></li><li class="delete even last"><a href="/admin/config/regional/date-time/formats/short/delete">delete</a></li></ul></div></div></td> </tr>
+</tbody>
+</table>
+  </div>
+  
+</div>
+
+</body>
+</html>

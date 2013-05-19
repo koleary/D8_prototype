@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multilingual Prototype</title>
+  <link rel="stylesheet" type="text/css" href="CSS/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/tables.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+  
+  <script src="javascript/jquery.min.js"></script>
+  
+  <script src="javascript/jquery-ui.min.js"></script>
+  
+  <script src="javascript/entity.js"></script>
+</head>
+
+<body>
+<div id="toolbar"> 
+	<div id="toolbar-left"></div>
+    <div id="toolbar-right"></div>
+<div>
+<div id="menu"></div>
+<div id="container">
+	<div id="branding">           
+        <h1 class="page-title">Wolf gentrify</h1>
+        <nav role="navigation" class="breadcrumb"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li><li><a href="/admin">Administration</a></li><li><a href="/admin/config" title="Administer settings.">Configuration</a></li><li><a href="/admin/config/regional" title="Regional settings, localization and translation.">Regional and language</a></li></ol></nav>   
+        <ul class="tabs__group">
+            <li class="tabs__tab">
+              <a class="tabs__tab__link" href="#">View</a>
+            </li>
+            <li class="tabs__tab is-active">
+              <a class="tabs__tab__link" href="index.html">Edit</a>
+            </li>
+        </ul>
+	</div>
+<div id="contentarea">
+  <form class="node-article-form node-form" enctype="multipart/form-data" action="/node/1/edit" method="post" id="article-node-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-title">
+ <label for="edit-title">Title<abbr class="form-required" title="This field is required.">*</abbr></label> <input type="text" id="edit-title" name="title" value="wolf gentrify" size="60" maxlength="255" class="form-text required" required aria-required="true" />
+</div>
+<div class="field-type-text-with-summary field-name-body field-widget-text-textarea-with-summary form-wrapper" id="edit-body"><div id="body-add-more-wrapper"><div class="text-format-wrapper form-item"><div class="text-summary-wrapper"><div class="form-item form-type-textarea form-item-body-und-0-summary">
+ <label for="edit-body-und-0-summary">Summary</label> <div class="form-textarea-wrapper"><textarea class="text-summary form-textarea resize-vertical" aria-describedby="edit-body-und-0-summary--description" id="edit-body-und-0-summary" name="body[und][0][summary]" rows="3" cols="60"></textarea></div>
+<div class="description" id="edit-body-und-0-summary--description">Leave blank to use trimmed value of full text as the summary.</div>
+</div>
+</div><div class="form-item form-type-textarea form-item-body-und-0-value">
+ <label for="edit-body-und-0-value">Body</label> <div class="form-textarea-wrapper"><textarea class="text-full form-textarea resize-vertical" id="edit-body-und-0-value" name="body[und][0][value]" rows="9" cols="60" placeholder="">Terry richardson wolf gentrify, actually gastropub gluten-free literally. Small batch deep v lomo VHS, neutra portland 3 wolf moon meggings mlkshk farm-to-table raw denim. Kale chips ethical gentrify, small batch mcsweeney&#039;s blue bottle gluten-free typewriter vice semiotics cray truffaut banjo. Portland sustainable forage vice, food truck neutra 8-bit chillwave kogi artisan. Pork belly meggings try-hard fashion axe, 90&#039;s stumptown bicycle rights wayfarers messenger bag disrupt. Flexitarian seitan keffiyeh, mlkshk fanny pack meggings tonx cred. Carles gluten-free shoreditch art party quinoa try-hard master cleanse deep v, skateboard keffiyeh.</textarea></div>
+</div>
+<div class="filter-wrapper form-wrapper" id="edit-body-und-0-format"><div class="filter-help form-wrapper" id="edit-body-und-0-format-help"><p><a href="/filter/tips" target="_blank">More information about text formats</a></p></div><div class="form-item form-type-select form-item-body-und-0-format">
+ <label for="edit-body-und-0-format--2">Text format</label> <select class="filter-list form-select" id="edit-body-und-0-format--2" name="body[und][0][format]"><option value="filtered_html" selected="selected">Filtered HTML</option><option value="full_html">Full HTML</option><option value="plain_text">Plain text</option></select>
+</div>
+<div class="filter-guidelines form-wrapper" id="edit-body-und-0-format-guidelines"><div class="filter-guidelines-item filter-guidelines-filtered_html"><h4 class="label">Filtered HTML</h4><ul class="tips"><li>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</li><li>Lines and paragraphs break automatically.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li></ul></div><div class="filter-guidelines-item filter-guidelines-full_html"><h4 class="label">Full HTML</h4><ul class="tips"><li>Lines and paragraphs break automatically.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li></ul></div><div class="filter-guidelines-item filter-guidelines-plain_text"><h4 class="label">Plain text</h4><ul class="tips"><li>No HTML tags allowed.</li><li>Lines and paragraphs break automatically.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li></ul></div></div></div></div>
+</div></div><div class="field-type-taxonomy-term-reference field-name-field-tags field-widget-taxonomy-autocomplete form-wrapper" id="edit-field-tags"><div class="form-item form-type-textfield form-item-field-tags-und">
+ <label for="edit-field-tags-und">Tags</label> <input aria-describedby="edit-field-tags-und--description" class="form-autocomplete form-text" type="text" id="edit-field-tags-und" name="field_tags[und]" value="" size="60" maxlength="1024" placeholder="" /><input class="autocomplete" id="edit-field-tags-und-autocomplete" type="hidden" value="http://sa807776c2cd5579.s3.simplytest.me/taxonomy/autocomplete/field_tags" />
+<div class="description" id="edit-field-tags-und--description">Enter a comma-separated list of words to describe your content.</div>
+</div>
+</div><div class="field-type-image field-name-field-image field-widget-image-image form-wrapper" id="edit-field-image"><div id="edit-field-image-und-0-upload-ajax-wrapper"><div class="form-item form-type-managed-file form-item-field-image-und-0">
+ <label for="edit-field-image-und-0-upload">Image</label> <div class="image-widget form-managed-file clearfix"><div class="image-widget-data"><input type="file" id="edit-field-image-und-0-upload" name="files[field_image_und_0]" size="22" class="form-file" /><input formnovalidate type="submit" id="edit-field-image-und-0-upload-button" name="field_image_und_0_upload_button" value="Upload" class="button form-submit" /><input type="hidden" name="field_image[und][0][fid]" value="0" /><input type="hidden" name="field_image[und][0][display]" value="1" /></div></div>
+<div class="description" id="edit-field-image-und-0-upload--description">Upload an image to go with this article.<br />Files must be less than <strong>2 MB</strong>.<br />Allowed file types: <strong>png gif jpg jpeg</strong>.</div>
+</div>
+</div></div><input type="hidden" name="changed" value="1367007552" /><input type="hidden" name="form_build_id" value="form-XpDW9sDT_sZr-ijxhDsEFVQszbeIgm5ERCBn3mjI6_0" /><input type="hidden" name="form_token" value="hHCg1tk0tW4fj9e19Df5X14O7llaHc8MlhT2HRitLKY" /><input type="hidden" name="form_id" value="article_node_form" /><div class="entity-meta form-wrapper" id="edit-advanced"><div class="entity-meta-header form-wrapper" id="edit-meta"><div class="published form-item form-type-item form-item-published" id="edit-published">
+ Published
+</div>
+</div>
+</div>
+
+</body>
+</html>
